@@ -1,0 +1,17 @@
+[package]
+name = "fita-pack"
+version = "0.1.0"
+description = "Loader and validator for Fita country packs"
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[dependencies]
+csv = "1.4.0"
+semver = { version = "1.0.28", features = ["serde"] }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_yaml = "0.9.34"
+thiserror = "2.0.21"
+
+[dev-dependencies]
+tempfile = "3.27.0"

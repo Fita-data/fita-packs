@@ -1,0 +1,16 @@
+pack: es
+version: 0.1.0
+country: ES
+fita: ">=0.1, <0.3"
+extends:
+  tax_id:
+    validator: es_tax_id
+    strip_prefix: [ES]
+  company_name:
+    legal_forms: dictionaries/legal_forms.csv
+    stopwords: dictionaries/stopwords.csv
+  address:
+    street_types: dictionaries/street_types.csv
+    postcode: { pattern: "^[0-9]{5}$", province_from_prefix: dictionaries/provinces.csv }
+  phone:
+    default_region: ES
